@@ -1,23 +1,24 @@
-Création d'un projet pour modéliser le système de badge de l'IUT :
+CrÃ©ation d'un projet pour modÃ©liser le systÃ¨me de badge de l'IUT :
 
 - La badgeuse permet d'entrer dans l'IUT
-- Une base de données contient les droits d'accès (non implémentée, remplacée par une classe)
+- Une base de donnÃ©es contient les droits d'accÃ¨s (non implÃ©mentÃ©e, remplacÃ©e par une classe)
 - Deux sortes de badgeuses existent
-- Deux sortes de badges existent : étudiants et enseignants
-- Deux systèmes sont notifiés lorsque quelqu'un badge : écran principal et supervision de l'administrateur
+- Deux sortes de badges existent : Ã©tudiants et enseignants
+- Deux systÃ¨mes sont notifiÃ©s lorsque quelqu'un badge : Ã©cran principal et supervision de l'administrateur
 
 
 ------------------
 
 
-Créer un "fork" du projet
-Créer une nouvelle branche nommée "TpDesignPattern_VotreNom" (où "VotreNom" est votre nom...)
+CrÃ©er un "fork" du projet
+CrÃ©er une nouvelle branche nommÃ©e "TpDesignPattern_VotreNom" (oÃ¹ "VotreNom" est votre nom...)
+- Pendant le dÃ©veloppement, Ã  chaque Ã©tape, penser Ã  faire des commits -
 
-
-Créer l'architecture permettant de modéliser le système, en utilisant les design pattern adaptés.
-Implémenter le système.
-Faire un main qui crée le système et plusieurs badges.
-Simuler une action d'entrée
+CrÃ©er l'architecture permettant de modÃ©liser le systÃ¨me, en utilisant les design pattern adaptÃ©s.
+ImplÃ©menter le systÃ¨me.
+Faire un main qui crÃ©e le systÃ¨me et plusieurs badges.
+Simuler une action d'entrÃ©e
+Faire un imprime-Ã©cran de la console de sortie, ou de l'IHM si vous dÃ©cidez d'en crÃ©er une
 
 Sauvegarder le projet sous Git
 Faire une Pull Request sur la branche "Integration" du projet principal
