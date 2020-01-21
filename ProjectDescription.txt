@@ -1,0 +1,23 @@
+Création d'un projet pour modéliser le système de badge de l'IUT :
+
+- La badgeuse permet d'entrer dans l'IUT
+- Une base de données contient les droits d'accès (non implémentée, remplacée par une classe)
+- Deux sortes de badgeuses existent
+- Deux sortes de badges existent : étudiants et enseignants
+- Deux systèmes sont notifiés lorsque quelqu'un badge : écran principal et supervision de l'administrateur
+
+
+------------------
+
+
+Créer un "fork" du projet
+Créer une nouvelle branche nommée "TpDesignPattern_VotreNom" (où "VotreNom" est votre nom...)
+
+
+Créer l'architecture permettant de modéliser le système, en utilisant les design pattern adaptés.
+Implémenter le système.
+Faire un main qui crée le système et plusieurs badges.
+Simuler une action d'entrée
+
+Sauvegarder le projet sous Git
+Faire une Pull Request sur la branche "Integration" du projet principal
