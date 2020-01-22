@@ -7,5 +7,4 @@ public class Main {
 		Database.insert("19009228", "etudiant");
 		Database.insert("19009229", "enseignant");
 	}
-
 }
