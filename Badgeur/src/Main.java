@@ -14,6 +14,17 @@ public class Main {
 		else {
 			System.out.println("Accer REFUSER!!!");
 		}
+		
+//		File f = new File("BDD");
+//		try (Scanner input = new Scanner(f))
+//		{
+//			String i = input.next();
+//			System.out.println(i);
+//		}	
+//		catch(FileNotFoundException e)
+//		{
+//			System.err.println("Pas de ficher " + f );
+//		}
 	}
 
 }
