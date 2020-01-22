@@ -1,9 +1,11 @@
+import Badge.Badge;
+import Badge.BadgeFactory;
 
 public class Main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		Database.insert("19009228", "etudiant");
+		Database.insert("19009229", "enseignant");
 	}
 
 }
