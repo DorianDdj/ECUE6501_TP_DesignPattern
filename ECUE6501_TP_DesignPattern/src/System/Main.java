@@ -16,7 +16,16 @@ public class Main {
 		Badgeuse badgeuseA = BadgeuseFactory.build("A");
 		Badgeuse badgeuseB = BadgeuseFactory.build("B");
 		
-		System.out.println(badgeuseA.checkBadge(badge1));
+		MainScreen ecranPrincipal = MainScreen.getInstance();
+		Admin supervisionAdmin = Admin.getInstance();
+		
+		badgeuseA.addObserver(ecranPrincipal);
+		badgeuseA.addObserver(supervisionAdmin);
+		
+		badgeuseB.addObserver(ecranPrincipal);
+		badgeuseB.addObserver(supervisionAdmin);
+		
+		badgeuseA.checkBadge(badge1);
 		
 	}
 }

@@ -8,7 +8,7 @@ public class Admin implements IObserver {
 	static private Admin instance;
 	private Admin() {};
 	
-	public Admin getInstance() {
+	public static Admin getInstance() {
 		if(instance==null)
 			instance = new Admin();
 		return instance;

@@ -7,7 +7,7 @@ public class MainScreen implements IObserver{
 	static private MainScreen instance;
 	private MainScreen() {};
 	
-	public MainScreen getInstance() {
+	public static MainScreen getInstance() {
 		if(instance==null)
 			instance = new MainScreen();
 		return instance;
