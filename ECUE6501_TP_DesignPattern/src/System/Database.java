@@ -1,3 +1,4 @@
+package System;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -16,7 +17,7 @@ public class Database {
 	//Simule une requête select
 	//prend en paramètre le numéro d'utilisateur
 	//renvoie le type d'utilisateur s'il existe, sinon null
-	static String select(String id) {
+	public static String select(String id) {
 		if(data.containsKey(id))
 			return data.get(id);
 		else
