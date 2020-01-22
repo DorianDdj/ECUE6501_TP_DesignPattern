@@ -15,6 +15,7 @@ public class MainScreen implements IObserver{
 
 	@Override
 	public void notify(Badge badge) {
+		//simule un affichage sur un écran
 		System.out.println("Affichage sur l'écran principal: l'utilisateur "+ badge.getId() +" a passé son badge");
 	}
 }

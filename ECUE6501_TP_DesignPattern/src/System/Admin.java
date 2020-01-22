@@ -16,6 +16,7 @@ public class Admin implements IObserver {
 
 	@Override
 	public void notify(Badge badge) {
+		//simule la sortie pour un admin
 		System.out.println("Ecriture dans le fichier de log de l'administrateur: l'utilisateur "+ badge.getId() +" a passé son badge");
 	}
 }

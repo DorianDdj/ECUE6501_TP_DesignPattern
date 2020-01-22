@@ -1,5 +1,6 @@
 package Badge;
 
+//badge enseignant
 public class BadgeTeacher extends Badge {
 
 	public BadgeTeacher(String id) {

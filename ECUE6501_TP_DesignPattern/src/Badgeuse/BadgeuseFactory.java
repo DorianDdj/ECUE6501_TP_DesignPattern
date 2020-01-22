@@ -5,6 +5,7 @@ import Badge.BadgeTeacher;
 
 public class BadgeuseFactory {
 	
+	//instancie et renvoie une badgeuse en fonction du type (A ou B) passé en paramètre
 	public static Badgeuse build(String type) {
 		Badgeuse badgeuse = null;
 		switch(type) {
