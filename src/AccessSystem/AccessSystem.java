@@ -4,9 +4,10 @@ import java.util.ArrayList;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class AccessSystem {
-
+    // Singleton
     private static AccessSystem instance = null;
 
+    // name of the system and arraylists to store badges an badge readers
     private String name;
     private ArrayList<Badge> badges;
     private ArrayList<BadgeReader> badgereaders;
@@ -40,10 +41,12 @@ public class AccessSystem {
         badgereaders.remove(b);
     }
 
+    // return a random badge
     Badge getRandomBadge(){
         return badges.get(ThreadLocalRandom.current().nextInt(badges.size() - 1));
     }
 
+    // returns a random badge reader
     BadgeReader getRandomBadgeReader(){
         return badgereaders.get(ThreadLocalRandom.current().nextInt(badgereaders.size() - 1));
     }

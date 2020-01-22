@@ -1,17 +1,24 @@
 package AccessSystem;
 
-import java.util.Observable;
+import java.beans.PropertyChangeListener;
+import java.beans.PropertyChangeSupport;
 import java.util.UUID;
 
-public abstract class BadgeReader extends Observable {
+public abstract class BadgeReader{
     private Integer accesslvl;
-    private String id, location;
+    private String id, location, event;
+    private final PropertyChangeSupport pcs;
 
     BadgeReader(String type, String location) throws Exception {
         this.id = UUID.randomUUID().toString();
         this.location = location;
-        this.addObserver(AdminPanel.getInstance());
-        this.addObserver(MainScreen.getInstance());
+        this.event = "Initialization";
+
+        // adds AdminPanel and MainScreen as observers for each BadgeReader
+        this.pcs = new PropertyChangeSupport(this);
+        this.addPropertyChangeListener(AdminPanel.getInstance());
+        this.addPropertyChangeListener(MainScreen.getInstance());
+
         switch(type){
             case "AllAccessBadgeReader":
                 this.accesslvl = 0;
@@ -27,13 +34,23 @@ public abstract class BadgeReader extends Observable {
         }
     }
 
+    private void addPropertyChangeListener(PropertyChangeListener listener) {
+        this.pcs.addPropertyChangeListener(listener);
+    }
+
+    public void removePropertyChangeListener(PropertyChangeListener listener) {
+        this.pcs.removePropertyChangeListener(listener);
+    }
+
+    // notify all observers of a badge scan
     void scanBadge(Badge b){
+        String lastevent = this.event;
         if (b.getAccesslvl() <= this.accesslvl){
-            setChanged();
-            notifyObservers( b + allowAccess());
+            this.event = b + allowAccess();
+            this.pcs.firePropertyChange("event", lastevent, this.event);
         } else {
-            setChanged();
-            notifyObservers( b + denyAccess());
+            this.event = b + denyAccess();
+            this.pcs.firePropertyChange("event", lastevent, this.event);
         }
     }
 
