@@ -8,7 +8,7 @@ public class BadgeuseB implements IBadgeuse {
 	public void getBadge(IBadge badge) { //vérification de la présence du badge dans la BDD
 		authorization = BDD.getID(badge.getID());
 		
-		System.out.println("BADGEUSE B :");
+		System.out.println("BADGEUSE B : ");
 		
 		for(IObserver o : ListOfObservers)
 			o.notifyObserver(badge.getID(), authorization);
